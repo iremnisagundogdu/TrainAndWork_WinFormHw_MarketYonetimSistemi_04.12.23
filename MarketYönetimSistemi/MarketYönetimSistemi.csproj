@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDDC5476-8306-4BC2-AF1B-C9D102EF74A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MarketYönetimSistemi</RootNamespace>
+    <AssemblyName>MarketYönetimSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin-Kategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin-Kategori.Designer.cs">
+      <DependentUpon>Admin-Kategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-Müsteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin-Müsteri.Designer.cs">
+      <DependentUpon>Admin-Müsteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-Rapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin-Rapor.Designer.cs">
+      <DependentUpon>Admin-Rapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-Ürün.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin-Ürün.Designer.cs">
+      <DependentUpon>Admin-Ürün.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\CategoryCrud.cs" />
+    <Compile Include="Controller\Functions.cs" />
+    <Compile Include="Controller\OderCrud.cs" />
+    <Compile Include="Controller\ProductCrud.cs" />
+    <Compile Include="Controller\RoleCrud.cs" />
+    <Compile Include="Controller\UserCrud.cs" />
+    <Compile Include="Data\DataContext.cs" />
+    <Compile Include="Entity\Abstract\CommonProperty.cs" />
+    <Compile Include="Entity\BuyProduct.cs" />
+    <Compile Include="Entity\Category.cs" />
+    <Compile Include="Entity\Interfaces\ICrud.cs" />
+    <Compile Include="Entity\Order.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\Role.cs" />
+    <Compile Include="Entity\SellProduct.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312032007344_dbCreate.cs" />
+    <Compile Include="Migrations\202312032007344_dbCreate.designer.cs">
+      <DependentUpon>202312032007344_dbCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Urundgv\DataSource.cs" />
+    <EmbeddedResource Include="Admin-Kategori.resx">
+      <DependentUpon>Admin-Kategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin-Müsteri.resx">
+      <DependentUpon>Admin-Müsteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin-Rapor.resx">
+      <DependentUpon>Admin-Rapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin-Ürün.resx">
+      <DependentUpon>Admin-Ürün.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312032007344_dbCreate.resx">
+      <DependentUpon>202312032007344_dbCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\market.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\müşteri.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category_icon_184131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ÜRÜN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rapor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\çıkış.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kategori-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ÜRÜN1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anagiris.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

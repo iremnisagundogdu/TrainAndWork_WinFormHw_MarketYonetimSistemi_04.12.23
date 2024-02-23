@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MarketYönetimSistemi",
+    "\\MarketYönetimSistemi\\Data",
+    "\\MarketYönetimSistemi\\Entity",
+    "\\MarketYönetimSistemi\\Entity\\Abstract",
+    "\\MarketYönetimSistemi\\Entity\\Interfaces"
+  ],
+  "SelectedNode": "\\MarketYönetimSistemi\\Data\\DataContext.cs",
+  "PreviewInSolutionExplorer": false
+}
